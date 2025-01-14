@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import Context from "../context/Context";
 
 function Login() {
 
@@ -6,6 +7,8 @@ function Login() {
     username: '',
     password: '',
   });
+
+  const { onLogin, user } = useContext(Context);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     // console.log(event.target.value);
@@ -18,7 +21,9 @@ function Login() {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    onLogin(input.username);
     console.log(input);
+    console.log(user);
   }
 
   return (
