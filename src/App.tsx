@@ -14,7 +14,6 @@ function App() {
         <Route path="/todo/add" element={<AddTodo/>} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
-      <h1>My App</h1>
     </>
   )
 }
