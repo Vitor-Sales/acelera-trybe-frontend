@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import Context from "../context/Context";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
 
@@ -8,7 +9,9 @@ function Login() {
     password: '',
   });
 
-  const { onLogin, user } = useContext(Context);
+  const navigate = useNavigate();
+
+  const { onLogin } = useContext(Context);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     // console.log(event.target.value);
@@ -22,8 +25,7 @@ function Login() {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     onLogin(input.username);
-    console.log(input);
-    console.log(user);
+    navigate('/todo');
   }
 
   return (

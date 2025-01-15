@@ -1,0 +1,54 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "value": "Learn React",
+      "completed": true
+    },
+    {
+      "id": 2,
+      "value": "Learn Node",
+      "completed": false
+    },
+    {
+      "id": 3,
+      "value": "Learn Express",
+      "completed": false
+    },
+    {
+      "id": 4,
+      "value": "Learn MongoDB",
+      "completed": false
+    },
+    {
+      "id": 5,
+      "value": "Learn TypeScript",
+      "completed": false
+    },
+    {
+      "id": 6,
+      "value": "Learn JavaScript",
+      "completed": false
+    },
+    {
+      "id": 7,
+      "value": "Learn CSS",
+      "completed": false
+    },
+    {
+      "id": 8,
+      "value": "Learn HTML",
+      "completed": false
+    },
+    {
+      "id": 9,
+      "value": "Learn Redux",
+      "completed": false
+    },
+    {
+      "id": 10,
+      "value": "Learn GraphQL",
+      "completed": false
+    }
+  ]
+}
