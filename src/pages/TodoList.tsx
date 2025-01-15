@@ -1,15 +1,21 @@
 import { useContext, useEffect } from "react";
 import Context from "../context/Context";
+import { Todo } from "../api/todosApi";
 
 function Login() {
 
-  const { user, loading, todos, getTodos } = useContext(Context);
+  const { user, loading, todos, getTodos, editTodos } = useContext(Context);
 
   useEffect(() => {
     if (!todos.length) {
       getTodos();
     }
   }, []);
+
+  const handleChange = (todo: Todo) => {
+    editTodos({...todo, completed: !todo.completed});
+  }
+
 
   return (
     <>
@@ -20,9 +26,13 @@ function Login() {
       <ul>
         {loading ? <p>loading...</p> : todos.map(todo => (
           <li key={todo.id}>
-            <input type="checkbox" checked={todo.completed} />
+            <input
+            type="checkbox" 
+            value={todo.value} 
+            checked={todo.completed} 
+            onChange={() => handleChange(todo)}
+            />
             <span>{todo.value}</span>
-            <button>Remove</button>
           </li>
         ))}
       </ul>
