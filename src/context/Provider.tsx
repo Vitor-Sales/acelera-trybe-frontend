@@ -2,7 +2,7 @@
 import Context from "./Context"
 import { useState } from "react";
 import { fetchTodos, Todo } from "../api/todosApi";
-import { putTodo } from "../api/todosApi";
+import { putTodo, postTodo } from "../api/todosApi";
 
 export type ProviderProps = {
   user: string;
@@ -11,6 +11,7 @@ export type ProviderProps = {
   todos: Todo[];
   loading: boolean;
   editTodos: (taskData: Todo) => void;
+  addTodo: (task: string) => Promise<void>;
 }
 
 function Provider({children}: {children: React.ReactNode}) {  
@@ -47,6 +48,11 @@ function Provider({children}: {children: React.ReactNode}) {
     putTodo(taskData);
   }
 
+  const addTodo = async (task: string) => {
+    const newTask = await postTodo(task);
+    setTodos([...todos, newTask]);
+  }
+
 
   const values = {
     user,
@@ -55,6 +61,7 @@ function Provider({children}: {children: React.ReactNode}) {
     loading,
     todos,
     editTodos,
+    addTodo,
   }
   
 

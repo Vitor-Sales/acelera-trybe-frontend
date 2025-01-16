@@ -1,10 +1,12 @@
 import { useContext, useEffect } from "react";
 import Context from "../context/Context";
 import { Todo } from "../api/todosApi";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
-
   const { user, loading, todos, getTodos, editTodos } = useContext(Context);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (!todos.length) {
@@ -21,7 +23,7 @@ function Login() {
     <>
       <h1>Welcome, {user}!</h1>
       {/* <img src="" alt="" /> */}
-      <button>Add New Task</button>
+      <button onClick={ () => navigate('/todo/add')}>Add New Task</button>
       <p>Daily Tasks</p>
       <ul>
         {loading ? <p>loading...</p> : todos.map(todo => (
