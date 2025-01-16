@@ -10,3 +10,15 @@
   flex-direction: column;
   gap: 1rem;
 }
+
+.pentagon {
+  height: 80vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  clip-path: polygon(0 0, 100% 0, 100% 30%, 50% 35%, 0 30%, 0 0);
+  background-color: var(--accent-color);
+  opacity: 75%;
+  z-index: -1;
+}

@@ -2,6 +2,7 @@ import { useContext, useEffect } from "react";
 import Context from "../context/Context";
 import { Todo } from "../api/todosApi";
 import { useNavigate } from "react-router-dom";
+import Pentagon from "../components/Pentagon";
 
 function Login() {
   const { user, loading, todos, getTodos, editTodos } = useContext(Context);
@@ -21,6 +22,7 @@ function Login() {
 
   return (
     <>
+      <Pentagon />
       <h1>Welcome, {user}!</h1>
       {/* <img src="" alt="" /> */}
       <button onClick={ () => navigate('/todo/add')}>Add New Task</button>

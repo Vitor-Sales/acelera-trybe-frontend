@@ -13,12 +13,12 @@
     {
       "id": "3",
       "value": "Learn Express",
-      "completed": true
+      "completed": false
     },
     {
       "id": "4",
       "value": "Learn MongoDB",
-      "completed": true
+      "completed": false
     },
     {
       "id": "5",
@@ -58,6 +58,11 @@
     {
       "id": "ef5c",
       "value": "fsfsafas",
+      "completed": false
+    },
+    {
+      "id": "72b3",
+      "value": "Fazer janta",
       "completed": false
     }
   ]
