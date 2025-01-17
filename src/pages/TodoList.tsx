@@ -3,6 +3,7 @@ import Context from "../context/Context";
 import { Todo } from "../api/todosApi";
 import { useNavigate } from "react-router-dom";
 import Pentagon from "../components/Pentagon";
+import Button from "../components/Button";
 
 function Login() {
   const { user, loading, todos, getTodos, editTodos } = useContext(Context);
@@ -23,11 +24,11 @@ function Login() {
   return (
     <>
       <Pentagon />
-      <h1>Welcome, {user}!</h1>
+      <h1 className="title">Welcome, {user}!</h1>
       {/* <img src="" alt="" /> */}
-      <button onClick={ () => navigate('/todo/add')}>Add New Task</button>
+      <Button text="Add New Task" onClick={ () => navigate('/todo/add') } />
       <p>Daily Tasks</p>
-      <ul>
+      <ul className="todo-list">
         {loading ? <p>loading...</p> : todos.map(todo => (
           <li key={todo.id}>
             <input

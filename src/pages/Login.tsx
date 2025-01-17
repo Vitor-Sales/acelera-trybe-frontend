@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import Context from "../context/Context";
 import { useNavigate } from "react-router-dom";
+import Button from "../components/Button";
 
 function Login() {
 
@@ -32,14 +33,16 @@ function Login() {
     <>
       <h1>Welcome</h1>
       <form action="" className="login-form" onSubmit={handleSubmit}>
-        <input 
+        <input
+          className="text-input"
           type="text" 
           id="username"
           name="username"
           placeholder="Enter your username"
           onChange={handleChange}
         />
-        <input 
+        <input
+          className="text-input"
           type="password" 
           id="password" 
           name="password" 
@@ -47,7 +50,8 @@ function Login() {
           onChange={handleChange}
         />
         <a href="#">Forgot Password</a>
-        <button type="submit">Sign In</button>
+        {/* <button type="submit" className="button">Sign In</button> */}
+        <Button text="Sign In" onClick={() => {}} />
       </form>
     </>
   );

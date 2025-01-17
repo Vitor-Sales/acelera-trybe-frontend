@@ -5,7 +5,7 @@ type ButtonProps = {
 
 function Button({ text, onClick}: ButtonProps) {
   return (
-    <button onClick={onClick}>{text}</button>
+    <button onClick={onClick} className="button">{text}</button>
   )
 }
 

@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import Context from "../context/Context";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import Button from "../components/Button";
 
 function Login() {
   const { user, addTodo } = useContext(Context);
@@ -33,14 +34,15 @@ function Login() {
       <form 
         className="login-form"
         onSubmit={handleSubmit}>
-        <input 
+        <input
+          className="text-input"
           name="task"
           id="task"
           value={task}
           type="text"
           onChange={handleChange}
           />
-        <button>Add to list</button>
+        <Button text="Add to list" onClick={() => {}} />
       </form>
     </>
   );
