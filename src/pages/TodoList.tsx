@@ -34,10 +34,10 @@ function Login() {
             <input
             type="checkbox" 
             value={todo.value} 
-            checked={todo.completed} 
+            checked={todo.completed}
             onChange={() => handleChange(todo)}
             />
-            <span>{todo.value}</span>
+            <span className={todo.completed ? 'completed' : ''}>{todo.value}</span>
           </li>
         ))}
       </ul>

@@ -79,3 +79,8 @@
   border: 1px solid var(--accent-color);
   background-color: var(--main-color);
 }
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}

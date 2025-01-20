@@ -13,7 +13,7 @@
     {
       "id": "3",
       "value": "Learn Express",
-      "completed": false
+      "completed": true
     },
     {
       "id": "4",
@@ -68,6 +68,11 @@
     {
       "id": "0beb",
       "value": "Correr",
+      "completed": false
+    },
+    {
+      "id": "4791",
+      "value": "Aula de UX",
       "completed": false
     }
   ]
