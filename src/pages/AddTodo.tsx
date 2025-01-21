@@ -3,6 +3,9 @@ import Context from "../context/Context";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import Button from "../components/Button";
+import Banner from "../components/Banner";
+import banner from "../assets/online-medical-consultation-male-svgrepo-com.svg"
+
 
 function Login() {
   const { user, addTodo } = useContext(Context);
@@ -29,7 +32,8 @@ function Login() {
 
   return (
     <>
-      <h1>Welcome, {user}</h1>
+      <h1>Welcome, {user ? user : 'guest'}!</h1>
+      <Banner src={banner} alt='Add To Do Banner'></Banner>
       <p>Add your new task</p>
       <form 
         className="login-form"

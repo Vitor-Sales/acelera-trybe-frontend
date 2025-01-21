@@ -3,17 +3,17 @@
     {
       "id": "1",
       "value": "Learn React",
-      "completed": true
+      "completed": false
     },
     {
       "id": "2",
       "value": "Learn Node",
-      "completed": true
+      "completed": false
     },
     {
       "id": "3",
       "value": "Learn Express",
-      "completed": true
+      "completed": false
     },
     {
       "id": "4",
@@ -38,7 +38,7 @@
     {
       "id": "8",
       "value": "Learn HTML",
-      "completed": true
+      "completed": false
     },
     {
       "id": "9",
@@ -48,31 +48,6 @@
     {
       "id": "10",
       "value": "Learn GraphQL",
-      "completed": false
-    },
-    {
-      "id": "6d2a",
-      "value": "Fazer janta",
-      "completed": false
-    },
-    {
-      "id": "ef5c",
-      "value": "fsfsafas",
-      "completed": false
-    },
-    {
-      "id": "72b3",
-      "value": "Fazer janta",
-      "completed": false
-    },
-    {
-      "id": "0beb",
-      "value": "Correr",
-      "completed": false
-    },
-    {
-      "id": "4791",
-      "value": "Aula de UX",
       "completed": false
     }
   ]

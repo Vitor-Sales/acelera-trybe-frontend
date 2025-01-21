@@ -25,14 +25,15 @@
 }
 
 .title {
+  margin-top: 4rem;
   font-size: 2rem;
   font-weight: 700;
-  margin-top: 8rem;
-  margin-bottom: 4rem;
 }
-.banner {
-  height: 211px;
-  margin: 20px;
+
+.lesser-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 1rem;
 }
 
 .text-input {
@@ -109,4 +110,17 @@
 .not-pass {
   color: rgb(173, 0, 0);
   font-size: .8rem;
+}
+
+#logo-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 8rem;
+  margin-bottom: 4rem;
+  color: var(--accent-color);
+}
+
+.banner {
+  height: 211px;
+  margin: 20px auto;
 }

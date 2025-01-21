@@ -1,6 +1,8 @@
 import { useContext, useState } from "react";
 import Context from "../context/Context";
 import { useNavigate } from "react-router-dom";
+import Banner from "../components/Banner";
+import banner from "../assets/task-list-svgrepo-com.svg";
 // import Button from "../components/Button";
 
 function Login() {
@@ -42,7 +44,8 @@ function Login() {
 
   return (
     <>
-      <h1>Welcome</h1>
+      <h1>Welcome to <span id="logo-title">Task Creator</span></h1>
+      <Banner src={banner} alt="Task Creator Banner" />
       <form action="" className="login-form" onSubmit={handleSubmit}>
         <input
           className="text-input"
