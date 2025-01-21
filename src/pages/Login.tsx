@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import Context from "../context/Context";
 import { useNavigate } from "react-router-dom";
-import Button from "../components/Button";
+// import Button from "../components/Button";
 
 function Login() {
 
@@ -9,6 +9,7 @@ function Login() {
     username: '',
     password: '',
   });
+  const [disable, setDisable] = useState(true);
 
   const navigate = useNavigate();
 
@@ -16,6 +17,16 @@ function Login() {
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     // console.log(event.target.value);
+
+    if (input.password.length >= 6 
+      && /[A-Z]/.test(input.password) 
+      && /[a-z]/.test(input.password) 
+      && /[0-9]/.test(input.password) 
+      && /[!@#$%^&*(),.?":{}|<>]/.test(input.password)) {
+        setDisable(false);
+      } else {
+        setDisable(true);
+      }
     
     setInput({
       ...input,
@@ -40,6 +51,7 @@ function Login() {
           name="username"
           placeholder="Enter your username"
           onChange={handleChange}
+          required
         />
         <input
           className="text-input"
@@ -48,10 +60,20 @@ function Login() {
           name="password" 
           placeholder="Enter your password"
           onChange={handleChange}
+          required
         />
-        <a href="#">Forgot Password</a>
+        <a href="#">Forgot Password?</a>
         {/* <button type="submit" className="button">Sign In</button> */}
-        <Button text="Sign In" onClick={() => {}} />
+        <div className="password-requirements">
+          <p>The password must have:</p>
+          <span className={/[A-Z]/.test(input.password) ? 'pass' : 'not-pass' } >Uppercase letter</span>
+          <span className={/[a-z]/.test(input.password) ? 'pass' : 'not-pass' }>Lowercase letter</span>
+          <span className={/[0-9]/.test(input.password) ? 'pass' : 'not-pass' }>Number</span>
+          <span className={/[!@#$%^&*(),.?":{}|<>]/.test(input.password) ? 'pass' : 'not-pass' }>Special algorism</span>
+          <span className={input.password.length >= 6 ? 'pass' : 'not-pass' }>More than 6 characters</span>
+        </div>
+        {/* <Button text="Sign In" onClick={() => {}} /> */}
+        <button className="button" disabled={disable}>Sign In</button>
       </form>
     </>
   );

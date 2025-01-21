@@ -61,6 +61,11 @@
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
+.button:disabled {
+  background-color: #c4c4c4;
+  color: #7a7a7a;
+}
+
 .todo-list {
   list-style: none;
   display: flex;
@@ -83,4 +88,25 @@
 .completed {
   text-decoration: line-through;
   opacity: 0.5;
+}
+
+.password-requirements {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: .4rem;
+  border: 1px dashed #55847a90;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.pass {
+  color: var(--accent-color);
+  font-size: .8rem;
+  text-decoration: line-through;
+}
+
+.not-pass {
+  color: rgb(173, 0, 0);
+  font-size: .8rem;
 }
